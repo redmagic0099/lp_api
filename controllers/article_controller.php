@@ -25,7 +25,7 @@ function get_article_detail($conn, $article_id)
     $stmt->bind_param("i", $article_id);
     $stmt->execute();
     $stmt->store_result();
-    $stmt->bind_result($id, $user_id, $title, $body); // 変な書き方な気がするけどな
+    $stmt->bind_result($id, $user_id, $title, $body); 
     $stmt->fetch();
     $stmt->close();
     if (empty($id)) {
