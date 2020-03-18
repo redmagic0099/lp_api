@@ -37,7 +37,7 @@ if ($conn->connect_error) {
             break;
         case 'POST':
             echo var_dump($request_data);
-            echo create_article($conn, $request_data);
+            // echo create_article($conn, $request_data);
             $insert_sql = 'INSERT INTO `logs`(title,start,goal,comment,lat,lng) VALUES ("'.$title.'", "'.$start.'", "'.$goal.'", "'.$comment.'", "'.$lat.'", "'.$lng.'")';
             echo var_dump($insert_sql);
             $conn->query($insert_sql);
